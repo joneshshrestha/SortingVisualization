@@ -3,12 +3,12 @@ let i = 0
 let w = 10
 
 function setup() {
-    createCanvas(800, 200);                           // CreateCanvas(width, height) 
+    createCanvas(800, 300);                           // CreateCanvas(width, height) 
     values = new Array(floor(width / w));             // Creates an array of length 80 but without any elements in the array
     for (let i = 0; i < values.length; i++) {         // While i < 80 runs the loop
         values[i] = random(height);                   // Fill the array with random heights (0 < height < 200 )
     }
-    frameRate(5)
+    //frameRate(5)
     quickSort(values, 0, values.length - 1)           // Passed array, start = 0, end = arrayLength-1
 }
 
@@ -47,7 +47,7 @@ function draw() {
 }
 
 async function swap(arr, a, b) {                      // Swap function
-    await sleep(25)                                 // Wait 1000ms before swap
+    await sleep(50)                                 // Wait 1000ms before swap
     let temp = arr[a]                                 
     arr[a] = arr[b]
     arr[b] = temp
